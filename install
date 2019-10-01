@@ -22,4 +22,4 @@ git clone https://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
 git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
 
 #Base2Tone theme
-git clone https://github.com/atelierbram/Base2Tone-vim.git ~/.vim/bundle
+git clone https://github.com/atelierbram/Base2Tone-vim.git ~/.vim/bundle/Base2Tone-vim

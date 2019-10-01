@@ -81,3 +81,8 @@ let g:lightline = {
 " or any of the other colorschemes
 " template is smart and detects light or dark colorscheme being used
 " }}}
+
+
+" Switching tabs with H and L
+nnoremap H gT
+nnoremap L gt
