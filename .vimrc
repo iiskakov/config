@@ -61,13 +61,22 @@ set background=dark
 " Base2Tone Dark
 " colorscheme Base2Tone_MorningDark
 " colorscheme Base2Tone_SeaDark
-" colorscheme Base2Tone_SpaceDark
+ colorscheme Base2Tone_SpaceDark
 " colorscheme Base2Tone_EarthDark
 " colorscheme Base2Tone_ForestDark
- colorscheme Base2Tone_DesertDark
+" colorscheme Base2Tone_DesertDark
 " colorscheme Base2Tone_LakeDark
 " colorscheme Base2Tone_MeadowDark
 " colorscheme Base2Tone_DrawbridgeDark
 " colorscheme Base2Tone_PoolDark
 " colorscheme Base2Tone_HeathDark
 " colorscheme Base2Tone_CaveDark
+" lightline {{{
+" -- INSERT -- is redundant because the mode information is displayed in the statusline:
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'Base2Tone_Pool',
+      \ }
+" or any of the other colorschemes
+" template is smart and detects light or dark colorscheme being used
+" }}}
