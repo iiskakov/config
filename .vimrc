@@ -1,5 +1,6 @@
 syntax on
 set nu rnu
+set nocp
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
