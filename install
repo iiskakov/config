@@ -1,0 +1,22 @@
+#!/bin/bash
+
+BASEDIR=$(dirname $0)
+cd $BASEDIR
+
+rm ~/.vimrc 2>/dev/null || true
+ln -s ${PWD}/.vimrc ~/.vimrc
+rm ~/.yabairc 2>/dev/null || true
+ln -s ${PWD}/.yabairc ~/.yabairc
+
+#Install pythogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+#Install NERDTree
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree 
+
+#Install Vim-Sensible
+git clone https://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
+
+#Install Lightline
+git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
