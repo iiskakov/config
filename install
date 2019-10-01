@@ -20,3 +20,6 @@ git clone https://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
 
 #Install Lightline
 git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
+
+#Base2Tone theme
+git clone https://github.com/atelierbram/Base2Tone-vim.git ~/.vim/bundle

@@ -54,3 +54,20 @@ end
 " persist the undo tree for each file
 set undofile
 set undodir^=~/.vim/undo//
+
+"""""THEME"""""
+syntax enable
+set background=dark
+" Base2Tone Dark
+" colorscheme Base2Tone_MorningDark
+" colorscheme Base2Tone_SeaDark
+" colorscheme Base2Tone_SpaceDark
+" colorscheme Base2Tone_EarthDark
+" colorscheme Base2Tone_ForestDark
+ colorscheme Base2Tone_DesertDark
+" colorscheme Base2Tone_LakeDark
+" colorscheme Base2Tone_MeadowDark
+" colorscheme Base2Tone_DrawbridgeDark
+" colorscheme Base2Tone_PoolDark
+" colorscheme Base2Tone_HeathDark
+" colorscheme Base2Tone_CaveDark
