@@ -23,7 +23,6 @@ set noshowmode
 "NERDTree 
 map <C-o> :NERDTreeToggle<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
-set fillchars+=vert:│
 
 """"""MISC"""""""
 
