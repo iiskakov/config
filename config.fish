@@ -8,3 +8,7 @@ kitty + complete setup fish | source
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="/usr/bin/vim" 
+
+function ls
+    exa -g1h $argv
+end
