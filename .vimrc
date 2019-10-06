@@ -24,6 +24,10 @@ set noshowmode
 map <C-o> :NERDTreeToggle<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
+"CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+
 """"""MISC"""""""
 
 "Disable arrows 
@@ -61,7 +65,7 @@ set background=dark
 " Base2Tone Dark
 " colorscheme Base2Tone_MorningDark
 " colorscheme Base2Tone_SeaDark
- colorscheme Base2Tone_SpaceDark
+colorscheme Base2Tone_SpaceDark
 " colorscheme Base2Tone_EarthDark
 " colorscheme Base2Tone_ForestDark
 " colorscheme Base2Tone_DesertDark
