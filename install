@@ -9,7 +9,7 @@ cd $BASEDIR
 
 #Vim & Neovim
 rm ~/.vimrc 2>/dev/null || true
-ln -s ${PWD}/neovim/vimrc ~/.vimrc
+ln -s ${PWD}/nvim/vimrc ~/.vimrc
 rm ~/.config/nvim/init.vim 2>/dev/null || true
 ln -s ${PWD}/nvim/init.vim ~/.config/nvim/init.vim
 
