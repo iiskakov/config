@@ -25,7 +25,7 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 function fish_greeting
 	echo
-	echo -e (uname -ro | awk '{print " \\\\e[1mOS: \\\\e[0;32m"$0"\\\\e[0m"}')
+	echo -e (uname -r | awk '{print " \\\\e[1mOS: \\\\e[0;32m"$0"\\\\e[0m"}')
 	echo -e (uptime | awk -F ',' '{print $1}' | uptime | awk -F ',' '{print $1}' | \
 			awk '{ $1=""; print}' | awk '{print " \\\\e[1mUptime: \\\\e[0;32m"$0"\\\\e[0m"}')
 	echo -e (uname -n | awk '{print " \\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
