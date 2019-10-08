@@ -46,21 +46,21 @@ function fish_greeting
 	if [ $r -lt 10 ]
 		# unimportant, so show rarely
 		set_color cyan
-		 echo "  [project] <description>"
+		 echo "  [showr] <anixiety is like when video game combat music is playing but you can't find any enemies>"
 	end
 	if [ $r -lt 25 ]
 		set_color green
-		 echo "  [project] <description>"
+		 echo "  [cleanup] <Clean and organize MacBook>"
 	end
 	if [ $r -lt 50 ]
 		# upcoming, so prompt regularly
 		set_color yellow
-		 echo "  [project] <description>"
+		 echo "  [misc] <Sell the freezer>"
 	end
 
 	# urgent, so prompt always
 	set_color red
-	 echo "  [project] <description>"
+	 echo "  [sommelier] <implement cython and 3d plot>"
 
 	echo
 
