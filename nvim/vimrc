@@ -1,3 +1,8 @@
+" Fish doesn't play all that well with others
+set shell=/bin/bash
+let mapleader = "\<Space>"
+
+"Editor settings
 syntax on
 set nu rnu
 set nocp
@@ -86,9 +91,27 @@ let g:lightline = {
 " }}}
 
 
-" Switching tabs with H and L
-nnoremap H gT
-nnoremap L gt
+" Stop that stupid window from popping up
+map q: :q
 
+" Jump to start and end of line using the home row keys
+map H ^
+map L $
 
+" Proper search
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
 
+" Search results centered please
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+" Very magic by default
+nnoremap ? ?\v
+nnoremap / /\v
+cnoremap %s/ %sm/
