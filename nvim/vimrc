@@ -11,6 +11,7 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 set cursorline
+set showcmd
 
 "Visual boundary ruler
 set colorcolumn=80

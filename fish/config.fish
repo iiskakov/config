@@ -1,4 +1,5 @@
-# Kitty autocomplete
+#
+#Kitty autocomplete
 kitty + complete setup fish | source
 
 # vim = nvim 
@@ -79,11 +80,39 @@ end
 fish_vi_key_bindings
 
 
+# Aliases to protect against overwriting
+abbr cp "cp -i"
+abbr mv "mv -i"
+
 #some Git stuff
 abbr g "git"
 abbr gcl "git clone"
+abbr ga 'git add -p'
 
 # External monitor padding
 abbr pad2 "yabai -m config --space 2 top_padding 160"
 
+# Fish git prompt
+set __fish_git_prompt_showuntrackedfiles 'yes'
+set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showstashstate ''
+set __fish_git_prompt_showupstream 'none'
+set -g fish_prompt_pwd_dir_length 3
 
+function fish_prompt
+	set_color brblack
+	echo -n "["(date "+%H:%M")"] "
+	set_color blue
+	echo -n (hostname)
+	if [ $PWD != $HOME ]
+		set_color brblack
+		echo -n ':'
+		set_color yellow
+		echo -n (basename $PWD)
+	end
+	set_color green
+	printf '%s ' (__fish_git_prompt)
+	set_color red
+	echo -n '| '
+	set_color normal
+end
