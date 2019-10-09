@@ -1,6 +1,3 @@
-# External monitor padding
-alias pad2 "yabai -m config --space 2 top_padding 160"
-
 # Kitty autocomplete
 kitty + complete setup fish | source
 
@@ -72,3 +69,21 @@ function fish_greeting
 
 	set_color normal
 end
+
+ # Autojump
+if test -f /usr/share/autojump/autojump.fish;
+	source /usr/share/autojump/autojump.fish;
+end
+
+#Vi binds test
+fish_vi_key_bindings
+
+
+#some Git stuff
+abbr g "git"
+abbr gcl "git clone"
+
+# External monitor padding
+abbr pad2 "yabai -m config --space 2 top_padding 160"
+
+
