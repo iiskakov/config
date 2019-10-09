@@ -8,7 +8,7 @@ alias vi="nvim"
 alias oldvim="/usr/bin/vim" 
 
 function ls
-    exa -g1h $argv
+    exa -gh $argv
 end
 
 # colored man output
