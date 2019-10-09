@@ -1,4 +1,6 @@
 cmd_ctrl = {"cmd","ctrl"}
+cmd = {"cmd"}
+
 script = [[ 
 set appName to "kitty"
 set startIt to false
@@ -15,7 +17,7 @@ end tell
 if startIt then
 	tell application appName to activate
 end if ]]
-hs.hotkey.bind(cmd_ctrl, "j", function()
+hs.hotkey.bind(cmd, "`", function()
   hs.applescript(script)
 end)
 
