@@ -1,4 +1,3 @@
-#
 #Kitty autocomplete
 kitty + complete setup fish | source
 
@@ -120,3 +119,22 @@ end
 abbr sp "spotify"
  #cht.sh 
  abbr cht "cht.sh"
+
+ #share text
+ abbr txtshr "curl -F 'f:1=<-' ix.io | pbcopy"
+
+#transfer files from terminal
+function transfer --description 'Upload a file to transfer.sh'
+    if [ $argv[1] ]
+        # write to output to tmpfile because of progress bar
+        set -l tmpfile ( mktemp -t transferXXX )
+        curl --progress-bar --upload-file $argv[1] https://transfer.sh/(basename $argv[1]) >> $tmpfile
+        cat $tmpfile
+        command rm -f $tmpfile
+    else
+        echo 'usage: transfer FILE_TO_TRANSFER'
+    end
+end
+
+#weather service https://github.com/chubin/wttr.in from terminal
+abbr weather "curl -s 'wttr.in/?lang=ru&m'"
