@@ -138,3 +138,6 @@ end
 
 #weather service https://github.com/chubin/wttr.in from terminal
 abbr weather "curl -s 'wttr.in/?lang=ru&m'"
+
+#speedtest
+abbr speedtest "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
