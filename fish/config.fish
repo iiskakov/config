@@ -116,3 +116,7 @@ function fish_prompt
 	echo -n '| '
 	set_color normal
 end
+
+abbr sp "spotify"
+ #cht.sh 
+ abbr cht "cht.sh"
