@@ -47,7 +47,7 @@ function fish_greeting
 	end
 	if [ $r -lt 25 ]
 		set_color green
-		 echo "  [cleanup] <Clean and organize MacBook>"
+		 echo " "
 	end
 	if [ $r -lt 50 ]
 		# upcoming, so prompt regularly
@@ -57,7 +57,7 @@ function fish_greeting
 
 	# urgent, so prompt always
 	set_color red
-	 echo "  [sommelier] <implement cython and 3d plot>"
+	 echo "  [sommelier] <.py to jupyter and defend it>"
 
 	echo
 
@@ -80,7 +80,7 @@ fish_vi_key_bindings
 
 
 # Aliases to protect against overwriting
-abbr cp "cp -i"
+# abbr cp "cp -i"
 abbr mv "mv -i"
 
 #some Git stuff
