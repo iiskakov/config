@@ -4,6 +4,7 @@ let mapleader = "\<Space>"
 
 "Editor settings
 syntax on
+set autoread " When a file is changed outside of Vim, just reload it rather than asking what to do.
 set nu rnu
 set nocp
 set tabstop=4
