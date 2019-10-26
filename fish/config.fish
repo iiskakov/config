@@ -47,7 +47,7 @@ function fish_greeting
 	end
 	if [ $r -lt 25 ]
 		set_color green
-		 echo " "
+		 echo "Create Firefox shortcut "
 	end
 	if [ $r -lt 50 ]
 		# upcoming, so prompt regularly

@@ -13,6 +13,7 @@ set shiftwidth=4
 set noexpandtab
 set cursorline
 set showcmd
+set mouse=a " Might be useful to resize splits with mouse
 
 "Visual boundary ruler
 set colorcolumn=80
