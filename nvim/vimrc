@@ -1,4 +1,5 @@
-" Fish doesn't play all that well with others
+"
+"Fish doesn't play all that well with others
 set shell=/bin/bash
 let mapleader = "\<Space>"
 
@@ -35,6 +36,35 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 "CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+
+" =============================================================================
+" # Keyboard shortcuts
+" =============================================================================
+" ; as :
+nnoremap ; :
+
+"save with leader+w
+inoremap <leader>w <Esc>:w<cr><Space>
+
+" Move by line
+nnoremap j gj
+nnoremap k gk
+
+" Ctrl+k  as Esc
+
+nnoremap <C-k> <Esc>
+inoremap <C-k> <Esc>
+vnoremap <C-k> <Esc>
+snoremap <C-k> <Esc>
+xnoremap <C-k> <Esc>
+cnoremap <C-k> <Esc>
+onoremap <C-k> <Esc>
+lnoremap <C-k> <Esc>
+tnoremap <C-k> <Esc>
+
+" Ctrl+h to stop searching
+vnoremap <C-h> :nohlsearch<cr>
+nnoremap <C-h> :nohlsearch<cr>
 
 """"""MISC"""""""
 
