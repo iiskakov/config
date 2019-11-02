@@ -43,8 +43,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " ; as :
 nnoremap ; :
 
-"save with leader+w
-inoremap <leader>w <Esc>:w<cr><Space>
+" <leader><leader> toggles between buffers
+nnoremap <leader><leader> <c-^>
+
+" Quick-save
+nmap <leader>w :w<CR>
+
 
 " Move by line
 nnoremap j gj
