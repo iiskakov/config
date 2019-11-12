@@ -89,7 +89,7 @@ abbr gcl "git clone"
 abbr ga 'git add -p'
 
 # External monitor padding
-abbr pad2 "yabai -m config --space 2 top_padding 160"
+abbr pad2 "yabai -m config --space 2 top_padding 3160 &&yabai -m config --space 2 top_padding 160"
 
 # Fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
@@ -141,3 +141,18 @@ abbr weather "curl -s 'wttr.in/?lang=ru&m'"
 
 #speedtest
 abbr speedtest "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
+
+#Fuzzy search vim fzf
+alias vif="nvim (fzf --height 40% --reverse)"
+
+
+#Fisher bootstrap
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
+
+
+# ~/.config/fish/config.fish
+starship init fish | source

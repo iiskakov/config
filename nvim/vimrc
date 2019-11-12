@@ -1,4 +1,3 @@
-"
 "Fish doesn't play all that well with others
 set shell=/bin/bash
 let mapleader = "\<Space>"
@@ -20,6 +19,11 @@ set mouse=a " Might be useful to resize splits with mouse
 set colorcolumn=80
 highlight ColorColumn ctermbg=darkgray
 
+" Common typos
+command! W w
+command! Wa wa
+command! Wq wq
+command! Wqa wqa
 
 """""""PLUGINS"""""""
 
@@ -48,7 +52,6 @@ nnoremap <leader><leader> <c-^>
 
 " Quick-save
 nmap <leader>w :w<CR>
-
 
 " Move by line
 nnoremap j gj
@@ -158,3 +161,7 @@ if has('nvim')
     set inccommand=nosplit
     noremap <C-q> :confirm qall<CR>
 end
+
+
+
+
