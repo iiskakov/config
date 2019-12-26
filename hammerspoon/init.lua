@@ -1,6 +1,6 @@
 cmd_ctrl = {"cmd","ctrl"}
 cmd = {"cmd"}
-
+--[===[ 
 script = [[ 
 set appName to "kitty"
 set startIt to false
@@ -17,7 +17,14 @@ end tell
 if startIt then
 	tell application appName to activate
 end if ]]
-hs.hotkey.bind(cmd, "`", function()
+hs.hotkey.bind(cmd, "1", function()
   hs.applescript(script)
 end)
-
+]===]
+hs.hotkey.bind(cmd, '`', function()
+  if hs.application.title(hs.application.frontmostApplication()) == "kitty" then
+  hs.eventtap.keyStroke('cmd', 'h')
+  else
+  hs.application.launchOrFocus("kitty.app")
+  end
+  end)
