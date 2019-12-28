@@ -28,3 +28,19 @@ hs.hotkey.bind(cmd, '`', function()
   hs.application.launchOrFocus("kitty.app")
   end
   end)
+
+hs.hotkey.bind("ctrl", ';', function()
+  if hs.application.title(hs.application.frontmostApplication()) == "Emacs" then
+  hs.eventtap.keyStroke('cmd', 'h')
+  else
+  hs.application.launchOrFocus("Emacs.app")
+  end
+  end)
+
+hs.hotkey.bind("ctrl", 'f', function()
+  if hs.application.title(hs.application.frontmostApplication()) == "Firefox" then
+  hs.eventtap.keyStroke('cmd', 'h')
+  else
+  hs.application.launchOrFocus("Firefox.app")
+  end
+  end)

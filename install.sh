@@ -29,6 +29,13 @@ ln -s ${PWD}/fish/config.fish  ~/.config/fish/config.fish
 rm ~/.hammerspoon/init.lua 2>/dev/null || true
 ln -s ${PWD}/hammerspoon/init.lua ~/.hammerspoon/init.lua  
 
+#Doom
+rm ~/.doom.d/init.el 2>/dev/null || true
+rm ~/.doom.d/config.el 2>/dev/null || true
+rm ~/.doom.d/packages.el 2>/dev/null || true
+ln -s ${PWD}/emacs/doom/init.el ~/.doom.d/init.el
+ln -s ${PWD}/emacs/doom/config.el ~/.doom.d/init.el
+ln -s ${PWD}/emacs/doom/packages.el ~/.doom.d/init.el
 
 #: }}}
 
