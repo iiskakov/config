@@ -1,5 +1,5 @@
 #Kitty autocomplete
-kitty + complete setup fish | source
+#kitty + complete setup fish | source
 
 # vim = nvim 
 alias vim="nvim"
@@ -89,7 +89,7 @@ abbr gcl "git clone"
 abbr ga 'git add -p'
 
 # External monitor padding
-abbr pad2 "yabai -m config --space 2 top_padding 3160 &&yabai -m config --space 2 top_padding 160"
+abbr pad2 "yabai -m config --space 2 top_padding 160"
 
 # Fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
