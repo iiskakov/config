@@ -37,6 +37,10 @@ ln -s ${PWD}/emacs/doom/init.el ~/.doom.d/init.el
 ln -s ${PWD}/emacs/doom/config.el ~/.doom.d/config.el
 ln -s ${PWD}/emacs/doom/packages.el ~/.doom.d/packages.el
 
+#Maid
+rm ~/.maid/rules.rb
+ln -s ${PWD}/maid/rules.rb  ~/.maid/rules.rb
+
 #: }}}
 
 
