@@ -17,6 +17,7 @@ set noexpandtab
 set cursorline
 set showcmd
 set mouse=a " Might be useful to resize splits with mouse
+let g:sneak#s_next = 1
 
 "Visual boundary ruler
 set colorcolumn=80
@@ -143,6 +144,10 @@ map q: :q
 map H ^
 map L $
 
+" Open hotkeys
+map <C-p> :Files<CR>
+nmap <leader>; :Buffers<CR>
+
 " Left and right can switch buffers
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
@@ -193,3 +198,9 @@ if has("autocmd")
   " https://stackoverflow.com/questions/31449496/vim-ignore-specifc-file-in-autocommand
   au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
+
+"https://github.com/junegunn/fzf.vim/issues/210
+set rtp+=/usr/local/opt/fzf

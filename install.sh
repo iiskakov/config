@@ -67,6 +67,11 @@ git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
 #Base2Tone theme
 git clone https://github.com/atelierbram/Base2Tone-vim.git ~/.vim/bundle/Base2Tone-vim
 
+#Vim rooter
+git clone https://github.com/airblade/vim-rooter ~/.vim/bundle/vim-rooter
+
+#Fzf vim support
+git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 
 #Vim-matchup
 git clone https://github.com/andymass/vim-matchup ~/.vim/bundle/vim-matchup
@@ -74,7 +79,12 @@ git clone https://github.com/andymass/vim-matchup ~/.vim/bundle/vim-matchup
 #Higlight yank
 git clone https://github.com/machakann/vim-highlightedyank ~/.vim/bundle/vim-highlightedyank
 
-#ctrl P
-git clone https://github.com/kien/ctrlp.vim.git b~/.vim/bundle/ctrlp.vim
+#vim sneak 
+git clone https://github.com/justinmk/vim-sneak ~/.vim/bundle/vim-sneak
+
+#Fzf vim
+git clone https://github.com/junegunn/fzf ~/.vim/bundle/fzf
+~/.vim/bundle/fzf/install --bin
+git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 
 #: }}}
