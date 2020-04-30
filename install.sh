@@ -38,21 +38,22 @@ ln -s ${PWD}/emacs/doom/config.el ~/.doom.d/config.el
 ln -s ${PWD}/emacs/doom/packages.el ~/.doom.d/packages.el
 
 #Maid
-rm ~/.maid/rules.rb
+rm ~/.maid/rules.rb 2>/dev/null || true
 ln -s ${PWD}/maid/rules.rb  ~/.maid/rules.rb
+
+#Tmux
+rm ~/.tmux.conf 2>/dev/null || true
+ln -s ~/config/tmux/.tmux.conf  ~/.tmux.conf
 
 #: }}}
 
 
 #: VIM PLUGINS
 
-#Install pythogen
+#Install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-
-
-###########
 
 #Install NERDTree
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree 
@@ -65,5 +66,15 @@ git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
 
 #Base2Tone theme
 git clone https://github.com/atelierbram/Base2Tone-vim.git ~/.vim/bundle/Base2Tone-vim
+
+
+#Vim-matchup
+git clone https://github.com/andymass/vim-matchup ~/.vim/bundle/vim-matchup
+
+#Higlight yank
+git clone https://github.com/machakann/vim-highlightedyank ~/.vim/bundle/vim-highlightedyank
+
+#ctrl P
+git clone https://github.com/kien/ctrlp.vim.git b~/.vim/bundle/ctrlp.vim
 
 #: }}}

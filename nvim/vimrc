@@ -7,9 +7,11 @@ syntax on
 set autoread " When a file is changed outside of Vim, just reload it rather than asking what to do.
 set nu rnu
 set nocp
+set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set ttyfast
 set clipboard=unnamed
 set noexpandtab
 set cursorline
@@ -141,6 +143,10 @@ map q: :q
 map H ^
 map L $
 
+" Left and right can switch buffers
+nnoremap <left> :bp<CR>
+nnoremap <right> :bn<CR>
+
 " Proper search
 set incsearch
 set ignorecase
@@ -171,4 +177,19 @@ end
 " Yanking to clipboard is magic!!!
 set clipboard+=unnamedplus
 
+" Show those damn hidden characters
+" Verbose: set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•
+set listchars=nbsp:¬,extends:»,precedes:«,trail:•
 
+"Type <Space>o to open a new file:
+nnoremap <Leader>o :CtrlP<CR>
+
+" Move by line
+nnoremap j gj
+nnoremap k gk
+
+" Jump to last edit position on opening file
+if has("autocmd")
+  " https://stackoverflow.com/questions/31449496/vim-ignore-specifc-file-in-autocommand
+  au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
