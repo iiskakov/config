@@ -80,6 +80,15 @@ nnoremap <C-h> :nohlsearch<cr>
 
 """"""MISC"""""""
 
+
+"Lightline to show full file path
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
+      \ }
+
+
 "Disable arrows 
 nnoremap <Down> :echoe "Use j"<CR> 
 nnoremap <Up> :echoe "Use k"<CR> 
@@ -128,9 +137,11 @@ set background=dark
 colorscheme simplicity
 " lightline {{{
 " -- INSERT -- is redundant because the mode information is displayed in the statusline:
-set noshowmode
 let g:lightline = {
       \ 'colorscheme': 'Base2Tone_Pool',
+	  \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
       \ }
 " or any of the other colorschemes
 " template is smart and detects light or dark colorscheme being used
