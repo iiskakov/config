@@ -20,55 +20,16 @@ setenv LESS_TERMCAP_so \e'[38;5;246m'    # begin standout-mode - info box
 setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
-#function fish_greeting
-#	echo
-#	echo -e (uname -r | awk '{print " \\\\e[1mOS: \\\\e[0;32m"$0"\\\\e[0m"}')
-#	echo -e (uptime | awk -F ',' '{print $1}' | uptime | awk -F ',' '{print $1}' | \
-#			awk '{ $1=""; print}' | awk '{print " \\\\e[1mUptime: \\\\e[0;32m"$0"\\\\e[0m"}')
-#	echo -e (uname -n | awk '{print " \\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
-#	echo
-#
-#
-#	set r (random 0 100)
-#	if [ $r -lt 5 ] # only occasionally show backlog (5%)
-#		echo -e " \e[1mBacklog\e[0;32m"
-#		set_color blue
-#		echo "  [project] <description>"
-#		echo
-#	end
-#
-#	set_color normal
-#	echo -e " \e[1mTODOs\e[0;32m"
-#	echo
-#	if [ $r -lt 10 ]
-#		# unimportant, so show rarely
-#		set_color cyan
-#		 echo "  [showr] <anixiety is like when video game combat music is playing but you can't find any enemies>"
-#	end
-#	if [ $r -lt 25 ]
-#		set_color green
-#		 echo "Create Firefox shortcut "
-#	end
-#	if [ $r -lt 50 ]
-#		# upcoming, so prompt regularly
-#		set_color yellow
-#		 echo "  [misc] <Sell the freezer>"
-#	end
-#
-#	# urgent, so prompt always
-#	set_color red
-#	 echo "  [sommelier] <.py to jupyter and defend it>"
-#
-#	echo
-#
-#	if test -s ~/todo
-#		set_color magenta
-#		cat todo | sed 's/^/ /'
-#		echo
-#	end
-#
-#	set_color normal
-#end
+function fish_greeting
+	echo
+	echo -e (uname -r | awk '{print " \\\\e[1mOS: \\\\e[0;32m"$0"\\\\e[0m"}')
+	echo -e (uptime | awk -F ',' '{print $1}' | uptime | awk -F ',' '{print $1}' | \
+			awk '{ $1=""; print}' | awk '{print " \\\\e[1mUptime: \\\\e[0;32m"$0"\\\\e[0m"}')
+	echo -e (uname -n | awk '{print " \\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
+	echo
+
+
+end
 
  # Autojump
 if test -f /usr/share/autojump/autojump.fish;
