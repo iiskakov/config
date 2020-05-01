@@ -87,4 +87,6 @@ git clone https://github.com/junegunn/fzf ~/.vim/bundle/fzf
 ~/.vim/bundle/fzf/install --bin
 git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 
+#Coc Intellisense
+git clone https://github.com/neoclide/coc.nvim ~/.vim/bundle/coc.nvim
 #: }}}
