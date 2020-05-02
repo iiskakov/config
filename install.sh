@@ -45,6 +45,8 @@ ln -s ${PWD}/maid/rules.rb  ~/.maid/rules.rb
 rm ~/.tmux.conf 2>/dev/null || true
 ln -s ~/config/tmux/.tmux.conf  ~/.tmux.conf
 
+
+
 #: }}}
 
 
@@ -89,4 +91,7 @@ git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 
 #Coc Intellisense
 git clone https://github.com/neoclide/coc.nvim ~/.vim/bundle/coc.nvim
+
+#Nerd Commenter
+git clone https://github.com/preservim/nerdcommenter.git ~/.vim/bundle/nerdcommenter.git
 #: }}}

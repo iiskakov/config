@@ -29,7 +29,6 @@ command! W w
 command! Wa wa
 command! Wq wq
 command! Wqa wqa
-command! Q q
 
 """""""PLUGINS"""""""
 
@@ -162,6 +161,9 @@ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " Stop that stupid window from popping up
 map q: :q
+
+" Also I never use Ex mode
+nnoremap Q <nop>
 
 " Jump to start and end of line using the home row keys
 map H ^
