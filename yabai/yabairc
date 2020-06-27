@@ -62,4 +62,5 @@ echo "yabai configuration loaded.."
 
 yabai -m rule --add app="^kitty$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
+yabai -m rule --add app="^cool-retro-term$" manage=off
 
