@@ -29,15 +29,14 @@ hs.hotkey.bind('', 'f1', function()
   end
   end)
 
---[=====[ 
-hs.hotkey.bind('', 'f2', function()
-  if hs.application.title(hs.application.frontmostApplication()) == "Emacs" then
+hs.hotkey.bind('', 'f6', function()
+  if hs.application.title(hs.application.frontmostApplication()) == "Spotify" then
   hs.eventtap.keyStroke('cmd', 'h')
   else
-  hs.application.launchOrFocus("Emacs.app")
+  hs.application.launchOrFocus("Spotify.app")
   end
   end)
---]=====]
+
 hs.hotkey.bind('', 'f3', function()
   if hs.application.title(hs.application.frontmostApplication()) == "Firefox" then
   hs.eventtap.keyStroke('cmd', 'h')

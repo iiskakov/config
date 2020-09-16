@@ -25,6 +25,8 @@ yabai -m config status_bar_background_color  0xff202020
 yabai -m config status_bar_foreground_color  0xffa8a8a8
 yabai -m config status_bar_space_icon_strip  I II III IV V VI VII VIII IX X
 yabai -m config status_bar_power_icon_strip   
+lo
+
 yabai -m config status_bar_space_icon        
 yabai -m config status_bar_clock_icon        
 
@@ -61,6 +63,8 @@ yabai -m config --space 2 top_padding	     160
 echo "yabai configuration loaded.."
 
 yabai -m rule --add app="^kitty$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^cool-retro-term$" manage=off
+yabai -m rule --add app="^GifCapture$" manage=off
 
