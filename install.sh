@@ -21,6 +21,10 @@ ln -s ${PWD}/yabai/yabairc ~/.yabairc
 rm ~/.config/kitty/kitty.conf 2>/dev/null || true
 ln -s ${PWD}/kitty/kitty.conf ~/.config/kitty/kitty.conf 
 
+#karabiner
+rm ~/.config/karabiner/karabiner.json 2>/dev/null || true
+ln -s ${PWD}/karabiner/karabiner.json ~/.config/karabiner/karabiner.json 
+
 #fish
 rm ~/.config/fish/config.fish 2>/dev/null || true
 ln -s ${PWD}/fish/config.fish  ~/.config/fish/config.fish
