@@ -83,7 +83,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.sublimetext.3"
+                                            "^org.gnu.Emacs"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -110,7 +110,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.sublimetext.3"
+                                            "^org.gnu.Emacs"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -137,7 +137,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.sublimetext.3"
+                                            "^org.gnu.Emacs"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -164,7 +164,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.sublimetext.3"
+                                            "^org.gnu.Emacs"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
