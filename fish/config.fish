@@ -6,6 +6,8 @@ alias vim="nvim"
 alias vi="nvim"
 alias oldvim="/usr/bin/vim" 
 
+fish_vi_key_bindings
+
 function ls
     exa -gh $argv
 end
