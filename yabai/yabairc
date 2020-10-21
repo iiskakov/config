@@ -68,4 +68,6 @@ yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^cool-retro-term$" manage=off
 yabai -m rule --add app="^GifCapture$" manage=off
-
+yabai -m rule --add label="Firfox PIP3" app="^Firefox Developer Edition$" title="^(Picture-in-Picture)$" manage=off
+yabai -m rule --add label="Firfox PIP2" app="Firefox Developer Edition" title="^(Picture-in-Picture)$" manage=off
+yabai -m rule --add label="Firfox PIP" app="^Firefox$" title="^(Picture-in-Picture)$" manage=off

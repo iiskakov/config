@@ -58,6 +58,13 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(after! org
+  (map! :map org-mode-map
+        :n "M-j" #'org-metadown
+        :n "M-k" #'org-metaup))
+
+
+
 ; (setq initial-frame-alist '((top . 5) (left . 5) (width . 202) (height . 62))) ; Default window size
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
