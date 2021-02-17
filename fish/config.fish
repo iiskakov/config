@@ -123,6 +123,9 @@ end
 
 
 # ~/.config/fish/config.fish
-starship init fish | source
+#starship init fish | source
 
 #Magit commit
+
+contains $HOME/.fig/bin $fish_user_paths; or set -Ua fish_user_paths $HOME/.fig/bin
+

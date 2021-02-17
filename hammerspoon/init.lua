@@ -68,4 +68,3 @@ hs.hotkey.bind('', 'f4', function()
   hs.application.launchOrFocus("Telegram.app")
   end
   end)
- 

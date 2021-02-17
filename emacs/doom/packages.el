@@ -49,5 +49,8 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! evil-tutor)
+(package! tree-sitter)
+(package! tree-sitter-langs)
+
 (package! org-super-agenda)
+(package! tide)
