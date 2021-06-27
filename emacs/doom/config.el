@@ -47,6 +47,8 @@
 ;;   :type 'boolean)
 
 
+(global-hl-line-mode 1)
+(column-number-mode 1)
 
 ;; ;; Add yasnippet support for all company backends
 ;; ;; https://github.com/syl20bnr/spacemacs/pull/179
@@ -224,8 +226,15 @@
 ;; (global-set-key (kbd "<tab>") #'+treemacs/toggle)
 ;; (map! "<tab>" #'+treemacs/toggle)
 
+(if (not (display-graphic-p))
+    (progn
+      ;; 增大垃圾回收的阈值，提高整体性能（内存换效率）
+      (setq gc-cons-threshold (* 8192 8192))
+      ;; 增大同LSP服务器交互时的读取文件的大小
+      (setq read-process-output-max (* 1024 1024 128)) ;; 128MB
+      ))
 
-(global-auto-revert-mode)
+(global-auto-revert-mode t)
 
 (blink-cursor-mode 1)
 
