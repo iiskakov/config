@@ -24,8 +24,7 @@
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        (ivy +fuzzy
-            +prescient
-            +icons)               ; a search engine for love and life
+            +prescient)               ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -63,16 +62,16 @@
        ;;lispy             ; vim for lisp, for people who don't like vim
        ;; multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
-       parinfer          ; turn lisp into python, sort of
+       ;; parinfer          ; turn lisp into python, sort of
        ;;rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        ;; word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
-       (dired +icons +ranger)             ; making dired pretty [functional]
+       ;; (dired +ranger)             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
-       (ibuffer +icons)         ; interactive buffer management
-       (undo +icons)              ; persistent, smarter undo for your inevitable mistakes
+       (ibuffer)         ; interactive buffer management
+       (undo)              ; persistent, smarter undo for your inevitable mistakes
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -88,7 +87,7 @@
 
        :tools
        ;;ansible
-       debugger          ; FIXME stepping through code, to help you add bugs
+       ;; debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
        ;; editorconfig      ; let someone else argue about tabs vs spaces
@@ -111,7 +110,7 @@
 
        :os
        (:if IS-MAC macos)  ; improve compatibility with macOS
-       ;;tty               ; improve the terminal Emacs experience
+       tty               ; improve the terminal Emacs experience
 
        :lang
        ;;agda              ; types of types of types of types...
@@ -179,7 +178,7 @@
 
        :app
        ;;calendar
-       irc               ; how neckbeards socialize
+       ;; irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
        ;;twitter           ; twitter client https://twitter.com/vnought
 

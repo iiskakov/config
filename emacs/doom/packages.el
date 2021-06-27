@@ -49,8 +49,11 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+(package! evil-string-inflection)
 (package! tree-sitter)
 (package! tree-sitter-langs)
 
 (package! org-super-agenda)
+(package! js-react-redux-yasnippets)
 (package! tide)
+

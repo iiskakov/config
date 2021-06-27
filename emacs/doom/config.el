@@ -26,12 +26,57 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 
-(setq doom-themes-treemacs-theme "doom-plain-dark")
-(setq doom-theme 'dichromacy)
+;; (setq doom-themes-treemacs-theme "dichromacy-theme")
+(setq doom-theme 'doom-henna)
 (setq doom-font (font-spec :family "Fira Code" :size 14))
 (setq doom-big-font (font-spec :family "Fira Code" :size 20))
 
-(setq company-idle-delay 0)
+;; ;; yasnippet
+;; (add-to-list 'load-path
+;;           "~/.emacs.d/plugins/yasnippet")
+;; (require 'yasnippet)
+;; (yas-global-mode 1)
+
+;; (setq company-idle-delay 1)
+;; (setq comp-async-jobs-number 24)
+;; (setq lsp-idle-delay 0.500)
+
+;; (defcustom lsp-enable-snippet t
+;;   "Enable/disable snippet completion support."
+;;   :group 'lsp-mode
+;;   :type 'boolean)
+
+
+
+;; ;; Add yasnippet support for all company backends
+;; ;; https://github.com/syl20bnr/spacemacs/pull/179
+;; (defvar company-mode/enable-yas t "Enable yasnippet for all backends.")
+
+;; (defun company-mode/backend-with-yas (backend)
+;;   (if (or (not company-mode/enable-yas) (and (listp backend)    (member 'company-yasnippet backend)))
+;;   backend
+;; (append (if (consp backend) backend (list backend))
+;;         '(:with company-yasnippet))))
+
+;; (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
+;;
+;;
+
+;; ;; Completion
+;; ;; Give a change to company-mode
+;; (require 'company)
+;; (add-hook 'after-init-hook 'global-company-mode)
+;; (setq company-dabbrev-other-buffers t
+;;       company-dabbrev-code-other-buffers t
+;;       company-complete-number t
+;;       company-show-numbers t
+;;       company-minimum-prefix-length 2
+;;       company-dabbrev-downcase nil
+;;       company-dabbrev-ignore-case t
+;;       company-idle-delay 0.1)
+
+
+;; (setq company-transformers '(company-sort-by-occurrence))
 
 ;; Tide configuring start
 ;;
@@ -48,6 +93,11 @@
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
   (company-mode +1))
+
+;; (use-package tide
+;;   :ensure t
+;;   :after (rjsx-mode company flycheck)
+;;   :hook (rjsx-mode . setup-tide-mode))
 
 ;; aligns annotation to the right hand side
 (setq company-tooltip-align-annotations t)
@@ -166,6 +216,7 @@
   (setq processing-application-dir "/Applications/Processing.app")
   (setq processing-sketchbook-dir "~/Documents/Processing"))
 
+(setq vterm-shell "/usr/local/bin/fish")
 
 (global-set-key (kbd "§") #'+vterm/toggle)
 (map! "§" #'+vterm/toggle)
@@ -173,11 +224,8 @@
 ;; (global-set-key (kbd "<tab>") #'+treemacs/toggle)
 ;; (map! "<tab>" #'+treemacs/toggle)
 
-(use-package! tree-sitter
-  :config
-  (require 'tree-sitter-langs)
-  (global-tree-sitter-mode)
-  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(global-auto-revert-mode)
 
 (blink-cursor-mode 1)
 
