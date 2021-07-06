@@ -250,3 +250,14 @@
 (if (equal now doom-theme) ;; only switches to the correct theme if needed
     nil
   (setq doom-theme now))
+
+(defun kill-format-all-buffer ()
+  (if (get-buffer "*format-all-errors*")
+        (let ((kill-buffer-query-functions nil))
+                (kill-buffer "*format-all-errors*")
+                (other-window 1)
+                (if (not (one-window-p))
+                  (delete-window))
+        )))
+
+(add-hook 'after-save-hook #'kill-format-all-buffer)
