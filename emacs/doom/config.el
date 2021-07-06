@@ -27,7 +27,7 @@
 ;; `load-theme' function. This is the default:
 
 ;; (setq doom-themes-treemacs-theme "dichromacy-theme")
-(setq doom-theme 'doom-henna)
+;; (setq doom-theme 'doom-plain)
 (setq doom-font (font-spec :family "Fira Code" :size 14))
 (setq doom-big-font (font-spec :family "Fira Code" :size 20))
 
@@ -46,6 +46,8 @@
 ;;   :group 'lsp-mode
 ;;   :type 'boolean)
 
+(when (get-buffer "*format-all-errors*")
+  (kill-buffer "*format-all-errors*"))
 
 (global-hl-line-mode 1)
 (column-number-mode 1)
@@ -239,3 +241,12 @@
 (blink-cursor-mode 1)
 
 
+(setq hour
+      (string-to-number
+       (substring (current-time-string) 11 13))) ;; gets the hour
+(if (member hour (number-sequence 6 16)) ;; if between 06:00-16:59
+    (setq now 'doom-plain) ;; then light theme
+  (setq now 'doom-plain-theme)) ;; else dark theme from 17:00
+(if (equal now doom-theme) ;; only switches to the correct theme if needed
+    nil
+  (setq doom-theme now))

@@ -31,9 +31,10 @@ function fish_greeting
 			awk '{ $1=""; print}' | awk '{print " \\\\e[1mUptime: \\\\e[0;32m"$0"\\\\e[0m"}')
 	echo -e (uname -n | awk '{print " \\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
 	echo
-
-
 end
+
+
+
 
  # Autojump
 begin
@@ -48,7 +49,7 @@ fish_vi_key_bindings
 
 
 # Aliases to protect against overwriting
-# abbr cp "cp -i"
+abbr cp "cp -i"
 abbr mv "mv -i"
 
 #some Git stuff
@@ -129,9 +130,10 @@ end
 
 #Magit commit
 
-contains $HOME/.fig/bin $fish_user_paths; or set -Ua fish_user_paths $HOME/.fig/bin
+# contains $HOME/.fig/bin $fish_user_paths; or set -Ua fish_user_paths $HOME/.fig/bin
 
 
 # Setting PATH for Python 3.9
 # The original version is saved in /Users/iskanderiskakov/.config/fish/config.fish.pysave
 set -x PATH "/Library/Frameworks/Python.framework/Versions/3.9/bin" "$PATH"
+
