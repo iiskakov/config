@@ -246,7 +246,7 @@
        (substring (current-time-string) 11 13))) ;; gets the hour
 (if (member hour (number-sequence 6 16)) ;; if between 06:00-16:59
     (setq now 'doom-plain) ;; then light theme
-  (setq now 'doom-plain-theme)) ;; else dark theme from 17:00
+  (setq now 'doom-plain-dark)) ;; else dark theme from 17:00
 (if (equal now doom-theme) ;; only switches to the correct theme if needed
     nil
   (setq doom-theme now))
