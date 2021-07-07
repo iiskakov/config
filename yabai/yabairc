@@ -59,11 +59,11 @@ yabai -m config right_padding                0
 yabai -m config window_gap                   5
 
 # ext monitor settings
-yabai -m config --space 2 top_padding	     160
+# yabai -m config --space 2 top_padding	     160
 echo "yabai configuration loaded.."
 
 yabai -m rule --add app="^kitty$" manage=off
-yabai -m rule --add app="^Emacs$" manage=off
+# yabai -m rule --add app="^Emacs$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^cool-retro-term$" manage=off
