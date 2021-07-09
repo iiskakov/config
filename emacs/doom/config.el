@@ -225,8 +225,7 @@
 (global-set-key (kbd "§") #'+vterm/toggle)
 (map! "§" #'+vterm/toggle)
 
-(global-set-key (kbd "SPC-z") #'evil-switch-to-windows-last-buffer)
-(map! "SPC-z" #'evil-switch-to-windows-last-buffer)
+(map! :leader "z" #'evil-switch-to-windows-last-buffer)
 
 ;; (global-set-key (kbd "<tab>") #'+treemacs/toggle)
 ;; (map! "<tab>" #'+treemacs/toggle)
