@@ -265,7 +265,8 @@
 
 (add-hook 'after-save-hook #'kill-format-all-buffer)
 
-(add-hook 'treemacs-mode-hook (lambda () (text-scale-decrease 2)))
+;; (add-hook 'treemacs-mode-hook (lambda () (text-scale-decrease 1.3)))
+(setq treemacs-width 24)
 
 (provide 'config)
 ;;; config.el ends here
