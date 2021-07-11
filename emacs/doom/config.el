@@ -242,6 +242,7 @@
 
 (blink-cursor-mode 1)
 
+(setq-default line-spacing 0.5)
 
 (setq hour
       (string-to-number
