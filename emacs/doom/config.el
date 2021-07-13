@@ -268,5 +268,24 @@
 ;; (add-hook 'treemacs-mode-hook (lambda () (text-scale-decrease 1.3)))
 (setq treemacs-width 24)
 
+
+ (setq +doom-dashboard-menu-sections
+    '(
+      ("Reload last session"
+      :icon (all-the-icons-octicon "history" :face 'doom-dashboard-menu-title)
+      :when (cond ((require 'persp-mode nil t)
+                    (file-exists-p (expand-file-name persp-auto-save-fname persp-save-dir)))
+                  ((require 'desktop nil t)
+                    (file-exists-p (desktop-full-file-name))))
+      :face (:inherit (doom-dashboard-menu-title bold))
+      :action doom/quickload-session)
+      ;; ("Recently opened files"
+      ;; :icon (all-the-icons-octicon "file-text" :face 'doom-dashboard-menu-title)
+      ;; :action recentf-open-files)
+      ("Open project"
+      :icon (all-the-icons-octicon "briefcase" :face 'doom-dashboard-menu-title)
+      :action projectile-switch-project)
+      ))
+
 (provide 'config)
 ;;; config.el ends here
