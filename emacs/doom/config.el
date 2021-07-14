@@ -157,6 +157,13 @@
 ;;               100
 ;;              doom-frame-transparency)))
 
+(after! evil
+  (setq evil-ex-substitute-global t     ; I like my s/../.. to by global by default
+        evil-move-cursor-back nil       ; Don't move the block cursor when toggling insert mode
+        evil-kill-on-visual-paste nil)) ; Don't put overwritten text in the kill ring
+
+
+
 (evil-goggles-mode)
 (global-hl-line-mode -1)
 
@@ -188,6 +195,10 @@
       evil-want-fine-undo t                       ; By default while in insert all changes are one big blob. Be more granular
       auto-save-default t                         ; Nobody likes to loose work, I certainly don't
       truncate-string-ellipsis "…")               ; Unicode ellispis are nicer than "...", and also save /precious/ space
+
+(setq +ivy-buffer-preview t)
+(custom-set-faces!
+  '(doom-modeline-buffer-modified :foreground "orange"))
 
 (setq deft-directory "~/Documents/notes"
       deft-extentions '("org" "txt")
@@ -227,9 +238,6 @@
 
 (map! :leader "z" #'evil-switch-to-windows-last-buffer)
 
-;; (global-set-key (kbd "<tab>") #'+treemacs/toggle)
-;; (map! "<tab>" #'+treemacs/toggle)
-
 (if (not (display-graphic-p))
     (progn
       ;; 增大垃圾回收的阈值，提高整体性能（内存换效率）
@@ -241,6 +249,7 @@
 (global-auto-revert-mode t)
 
 (blink-cursor-mode 1)
+
 
 (setq-default line-spacing 0.5)
 
@@ -267,7 +276,6 @@
 
 ;; (add-hook 'treemacs-mode-hook (lambda () (text-scale-decrease 1.3)))
 (setq treemacs-width 24)
-
 
  (setq +doom-dashboard-menu-sections
     '(
