@@ -295,5 +295,13 @@
       :action projectile-switch-project)
       ))
 
+;; my pinkie hurts
+;; also i use line selection more often than char selection
+(define-key evil-normal-state-map (kbd  "v") 'evil-visual-line)
+(define-key evil-normal-state-map (kbd "v") 'evil-visual-char)
+
+(define-key evil-visual-state-map (kbd "v") 'evil-visual-line)
+(define-key evil-visual-state-map (kbd "v") 'evil-visual-char)
+
 (provide 'config)
 ;;; config.el ends here
