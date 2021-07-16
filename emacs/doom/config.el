@@ -298,10 +298,15 @@
 ;; my pinkie hurts
 ;; also i use line selection more often than char selection
 (define-key evil-normal-state-map (kbd  "v") 'evil-visual-line)
-(define-key evil-normal-state-map (kbd "v") 'evil-visual-char)
+(define-key evil-normal-state-map (kbd "V") 'evil-visual-char)
 
 (define-key evil-visual-state-map (kbd "v") 'evil-visual-line)
-(define-key evil-visual-state-map (kbd "v") 'evil-visual-char)
+(define-key evil-visual-state-map (kbd "V") 'evil-visual-char)
+
+(advice-add 'evil-ex-search-next :after
+            (lambda (&rest x) (evil-scroll-line-to-center (line-number-at-pos))))
+(advice-add 'evil-ex-search-previous :after
+            (lambda (&rest x) (evil-scroll-line-to-center (line-number-at-pos))))
 
 (provide 'config)
 ;;; config.el ends here
