@@ -308,5 +308,24 @@
 (advice-add 'evil-ex-search-previous :after
             (lambda (&rest x) (evil-scroll-line-to-center (line-number-at-pos))))
 
+(setq evil-mode-line-format nil
+      evil-insert-state-cursor '(bar "Orange")
+      evil-visual-state-cursor '(box "#F86155"))
+
+;; Testing to find out whether it'll allow me to autocomplete snippets
+(use-package! company
+  :config
+  (setq
+   company-idle-delay 0.5
+   company-minimum-prefix-length 5))
+
+
+
+
+;; Don't show encoding in mode line
+(setq
+ doom-modeline-buffer-encoding 'nil
+ +modeline-encoding 'nil)
+
 (provide 'config)
 ;;; config.el ends here
