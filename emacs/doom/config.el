@@ -327,5 +327,8 @@
  doom-modeline-buffer-encoding 'nil
  +modeline-encoding 'nil)
 
+;; Helps with "vim'ing" words in camelCase
+(global-superword-mode 1)
+
 (provide 'config)
 ;;; config.el ends here
