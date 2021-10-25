@@ -316,11 +316,12 @@
 (use-package! company
   :config
   (setq
-   company-idle-delay 0.5
+   company-idle-delay 0.1
    company-minimum-prefix-length 5))
 
 
 
+(map! :n "TAB" #'indent-for-tab-command)
 
 ;; Don't show encoding in mode line
 (setq
