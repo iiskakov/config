@@ -66,6 +66,11 @@
 ;;
 ;;
 
+;; Emacs 29 and doom are friends now
+(general-auto-unbind-keys :off)
+(remove-hook 'doom-after-init-modules-hook #'general-auto-unbind-keys)
+
+
 ;; ;; Completion
 ;; ;; Give a change to company-mode
 ;; (require 'company)
@@ -134,6 +139,11 @@
 
 (setq +doom-dashboard-ascii-banner-fn #'42-ftw)
 
+
+(setq ns-auto-hide-menu-bar t)
+(set-frame-position nil 0 -24)
+(tool-bar-mode 0)
+(set-frame-size nil 150 80)
 
 
 ;; If you use `org' and don't want your org files in the default location below,
