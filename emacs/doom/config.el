@@ -9,6 +9,9 @@
 (setq user-full-name "Iskander Iskakov"
       user-mail-address "tradeshells@gmail.com")
 
+;; Experimenting with transparent Emacs
+(doom/set-frame-opacity 70)
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -30,6 +33,7 @@
 ;; (setq doom-theme 'doom-plain)
 (setq doom-font (font-spec :family "Fira Code" :size 14))
 (setq doom-big-font (font-spec :family "Fira Code" :size 20))
+
 
 ;; ;; yasnippet
 ;; (add-to-list 'load-path
@@ -88,7 +92,6 @@
 ;; (setq company-transformers '(company-sort-by-occurrence))
 
 ;; Tide configuring start
-;;
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 (defun setup-tide-mode ()
