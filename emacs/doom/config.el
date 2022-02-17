@@ -31,8 +31,8 @@
 
 ;; (setq doom-themes-treemacs-theme "dichromacy-theme")
 ;; (setq doom-theme 'doom-plain)
-(setq doom-font (font-spec :family "Fira Code" :size 14))
-(setq doom-big-font (font-spec :family "Fira Code" :size 20))
+(setq doom-font (font-spec :family "MonoLisa" :size 14))
+(setq doom-big-font (font-spec :family "MonoLisa" :size 20))
 
 
 ;; ;; yasnippet
@@ -366,6 +366,10 @@
 
 ;; Helps with "vim'ing" words in camelCase
 (global-superword-mode 1)
+
+;; ;; Can emacs open large files as fast as vim please?
+(use-package! vlf-setup
+  :defer-incrementally vlf-tune vlf-base vlf-write vlf-search vlf-occur vlf-follow vlf-ediff vlf)
 
 (provide 'config)
 ;;; config.el ends here
