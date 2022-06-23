@@ -298,7 +298,7 @@
 (blink-cursor-mode 1)
 
 
-(setq-default line-spacing 0.5)
+(setq-default line-spacing 0.6)
 
 ;; ;; Theme day/night
 ;; (setq hour
