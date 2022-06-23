@@ -54,9 +54,10 @@
 (package! evil-string-inflection)
 (package! tree-sitter)
 (package! tree-sitter-langs)
-(package! vlf :recipe (:host github :repo "m00natic/vlfi" :files ("*.el"))
-  :pin "cc02f2533782d6b9b628cec7e2dcf25b2d05a27c" :disable t)
+;; (package! vlf :recipe (:host github :repo "m00natic/vlfi" :files ("*.el"))
+;;   :pin "cc02f2533782d6b9b628cec7e2dcf25b2d05a27c" :disable t)
 (package! org-super-agenda)
+(package! sexy-monochrome-theme)
 (package! js-react-redux-yasnippets)
 (package! tide)
 

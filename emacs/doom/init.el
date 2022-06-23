@@ -23,8 +23,9 @@
        company           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       (ivy +fuzzy
-            +prescient)               ; a search engine for love and life
+       ;; (ivy +fuzzy
+       ;;      +prescient)               ; a search engine for love and life
+       (vertico +icons)
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -34,9 +35,9 @@
        ;;fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
-       ;; indent-guides     ; highlighted indent columns
+       indent-guides     ; highlighted indent columns
        (ligatures +fira)        ; ligatures and symbols to make your code pretty again
-       minimap           ; show a map of the code on the side
+       ;; minimap           ; show a map of the code on the side
        (modeline +light)          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink cursor line after big motions
        ;;neotree           ; a project drawer, like NERDTree for vim
@@ -44,10 +45,10 @@
        (popup +all +defaults)   ; tame sudden yet inevitable temporary windows
        ;;tabs              ; a tab bar for Emacs
        treemacs          ; a project drawer, like neotree but cooler
-       (emoji +unicode)
+       ;; (emoji +unicode)
        ;;unicode           ; extended unicode support for various languages
-       vc-gutter         ; vcs diff in the fringe
-       vi-tilde-fringe   ; fringe tildes to mark beyond EOB
+       ;; vc-gutter         ; vcs diff in the fringe
+       ;; vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        (window-select
         +numbers)
                                         ;visually switch windows
@@ -57,11 +58,11 @@
        :editor
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
-       fold              ; (nigh) universal code folding
+       ;; fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
        ;;god               ; run Emacs commands without modifier keys
        ;;lispy             ; vim for lisp, for people who don't like vim
-       multiple-cursors  ; editing in many places at once
+       ;; multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
        ;; parinfer          ; turn lisp into python, sort of
        ;;rotate-text       ; cycle region at point between text candidates

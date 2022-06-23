@@ -10,7 +10,14 @@
       user-mail-address "tradeshells@gmail.com")
 
 ;; Experimenting with transparent Emacs
-(doom/set-frame-opacity 70)
+;; (doom/set-frame-opacity 70)
+
+
+(after! cc-mode
+  (remove-hook 'python-mode-hook #'rainbow-delimiters-mode)
+  (remove-hook 'rjsx-mode-hook #'rainbow-delimiters-mode)
+  (remove-hook 'c-mode-common-hook #'rainbow-delimiters-mode)
+)
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -74,20 +81,24 @@
 (general-auto-unbind-keys :off)
 (remove-hook 'doom-after-init-modules-hook #'general-auto-unbind-keys)
 
+;; Completion
+;; Give a change to company-mode
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-dabbrev-other-buffers t
+      company-dabbrev-code-other-buffers t
+      company-complete-number t
+      company-show-numbers t
+      company-minimum-prefix-length 2
+      company-dabbrev-downcase nil
+      company-dabbrev-ignore-case t
+      company-idle-delay 0.1)
 
-;; ;; Completion
-;; ;; Give a change to company-mode
-;; (require 'company)
-;; (add-hook 'after-init-hook 'global-company-mode)
-;; (setq company-dabbrev-other-buffers t
-;;       company-dabbrev-code-other-buffers t
-;;       company-complete-number t
-;;       company-show-numbers t
-;;       company-minimum-prefix-length 2
-;;       company-dabbrev-downcase nil
-;;       company-dabbrev-ignore-case t
-;;       company-idle-delay 0.1)
-
+;; Github copilot test
+;;
+;; (add-to-list 'load-path "/Users/iskander/.doom.d/flight-attendant.el/")
+;; (load "flight-attendant.el")
+;; (fa-enable)
 
 ;; (setq company-transformers '(company-sort-by-occurrence))
 
@@ -289,15 +300,20 @@
 
 (setq-default line-spacing 0.5)
 
-(setq hour
-      (string-to-number
-       (substring (current-time-string) 11 13))) ;; gets the hour
-(if (member hour (number-sequence 6 16)) ;; if between 06:00-16:59
-    (setq now 'doom-plain) ;; then light theme
-  (setq now 'doom-plain-dark)) ;; else dark theme from 17:00
-(if (equal now doom-theme) ;; only switches to the correct theme if needed
-    nil
-  (setq doom-theme now))
+;; ;; Theme day/night
+;; (setq hour
+;;       (string-to-number
+;;        (substring (current-time-string) 11 13))) ;; gets the hour
+;; (if (member hour (number-sequence 6 16)) ;; if between 06:00-16:59
+;;     (setq now 'doom-plain-light) ;; then light theme
+;;   (setq now 'doom-plain-dark)) ;; else dark theme from 17:00
+;; (if (equal now doom-theme) ;; only switches to the correct theme if needed
+;;     nil
+;;   (setq doom-theme now))
+;;
+
+(setq doom-theme 'doom-vibrant)
+;; (load-theme 'sexy-monochrome)
 
 (defun kill-format-all-buffer ()
   (if (get-buffer "*format-all-errors*")
@@ -348,12 +364,12 @@
       evil-insert-state-cursor '(bar "Orange")
       evil-visual-state-cursor '(box "#F86155"))
 
-;; Testing to find out whether it'll allow me to autocomplete snippets
-(use-package! company
-  :config
-  (setq
-   company-idle-delay 0.1
-   company-minimum-prefix-length 5))
+;; ;; Testing to find out whether it'll allow me to autocomplete snippets
+;; (use-package! company
+;;   :config
+;;   (setq
+;;    company-idle-delay 0.1
+;;    company-minimum-prefix-length 5))
 
 
 
@@ -364,12 +380,13 @@
  doom-modeline-buffer-encoding 'nil
  +modeline-encoding 'nil)
 
+
 ;; Helps with "vim'ing" words in camelCase
 (global-superword-mode 1)
 
 ;; ;; Can emacs open large files as fast as vim please?
-(use-package! vlf-setup
-  :defer-incrementally vlf-tune vlf-base vlf-write vlf-search vlf-occur vlf-follow vlf-ediff vlf)
+;; (use-package! vlf-setup
+;;   :defer-incrementally vlf-tune vlf-base vlf-write vlf-search vlf-occur vlf-follow vlf-ediff vlf)
 
 (provide 'config)
 ;;; config.el ends here
