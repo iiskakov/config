@@ -64,7 +64,7 @@ echo "yabai configuration loaded.."
 
 yabai -m rule --add app=Emacs manage=on
 yabai -m rule --add app="^kitty$" manage=off
-# yabai -m rule --add app="^Emacs$" manage=off
+yabai -m rule --add app="^Emacs$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^cool-retro-term$" manage=off
